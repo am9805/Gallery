@@ -1,7 +1,7 @@
 <h1> Gato o Perro App </h1>
-<p> Qué prefieres? </p>
-<iframe src="https://www.w3schools.com"></iframe>
+<p> ¿Qué prefieres? </p>
 
-<input type="text"/>
-<img src="https://thecatapi.com/api/images/get?format=src&type=gif ">
-<img src="https://api.thedogapi.com/v1/images/search?format=src&mime_types=image/gif">
+<input [(ngModel)]="animal" type="text"/>
+
+<img *ngIf="animal === 'gato'" src="https://thecatapi.com/api/images/get?format=src&type=gif">
+<img *ngIf="animal ==='perro'" src="https://api.thedogapi.com/v1/images/search?format=src&mime_types=image/gif">
